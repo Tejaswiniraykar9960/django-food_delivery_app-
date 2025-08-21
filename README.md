@@ -29,7 +29,7 @@ Bootstrap (for UI styling)
 ## Setup Instructions
 1. Clone the Repository
 
-git clone https://github.com/Tejaswiniraykar9960/django_food_delivery.git
+git clone https://github.com/Tejaswiniraykar9960/django-food_delivery_app.git
 cd food-delivery-django
 
 
