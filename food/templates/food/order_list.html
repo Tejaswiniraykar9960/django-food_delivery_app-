@@ -1,0 +1,15 @@
+{% extends 'food/base.html' %}
+{% block content %}
+<h2>My Orders</h2>
+{% for o in orders %}
+<div class="card mb-2">
+  <div class="card-body">
+    <h5>Order #{{ o.id }} — {{ o.get_status_display }}</h5>
+    <p>Restaurant: {{ o.restaurant.name }} | Total: ₹{{ o.total_price }}</p>
+    <a href="{% url 'order_detail' o.id %}">View</a>
+  </div>
+</div>
+{% empty %}
+<p>No orders yet.</p>
+{% endfor %}
+{% endblock %}

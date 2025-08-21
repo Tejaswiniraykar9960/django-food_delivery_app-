@@ -1,0 +1,20 @@
+{% extends 'food/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Restaurants</h1>
+<div class="row">
+{% for r in restaurants %}
+  <div class="col-md-4">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5>{{ r.name }}</h5>
+        <p>{{ r.address }}</p>
+        <a href="{% url 'restaurant_detail' r.pk %}" class="btn btn-primary">View Menu</a>
+      </div>
+    </div>
+  </div>
+{% empty %}
+  <p>No restaurants available.</p>
+{% endfor %}
+</div>
+{% endblock %}

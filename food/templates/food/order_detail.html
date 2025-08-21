@@ -1,0 +1,11 @@
+{% extends 'food/base.html' %}
+{% block content %}
+<h2>Order #{{ order.id }}</h2>
+<p>Status: {{ order.get_status_display }}</p>
+<p>Total: ₹{{ order.total_price }}</p>
+<ul>
+{% for item in order.items.all %}
+<li>{{ item.menu_item.name }} × {{ item.quantity }} — ₹{{ item.price }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

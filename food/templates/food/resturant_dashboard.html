@@ -1,0 +1,17 @@
+{% extends 'food/base.html' %}
+{% block content %}
+<h2>{{ restaurant.name }} Dashboard</h2>
+<a href="{% url 'menu_item_create' %}" class="btn btn-primary mb-3">Add Menu Item</a>
+<h4>Menu Items</h4>
+<ul>
+{% for item in menu_items %}
+  <li>{{ item.name }} — ₹{{ item.price }} <a href="{% url 'menu_item_edit' item.id %}">Edit</a></li>
+{% endfor %}
+</ul>
+<h4>Orders</h4>
+<ul>
+{% for o in orders %}
+  <li>Order #{{ o.id }} — {{ o.get_status_display }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
