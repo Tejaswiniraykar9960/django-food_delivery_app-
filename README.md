@@ -15,8 +15,21 @@ It is a beginner-friendly project to learn Django CRUD operations and authentica
 - ✅ Add / Edit / Delete Menu Items
 - ✅ Simple Dashboard to view items
 - ✅ SQLite database for storage
-- ✅ Bootstrap-based UI (responsive design)
 
----
+
+## Technologies Used
+Python 3.11+
+Django
+SQLite3 (default Django DB)
+HTML/CSS (Django Templates)
+Bootstrap (for UI styling)
+
+)
+
+## Setup Instructions
+1. Clone the Repository
+
+git clone https://github.com/Tejaswiniraykar9960/django_food_delivery.git
+cd food-delivery-django
 
 
